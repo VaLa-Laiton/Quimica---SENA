@@ -1,0 +1,1531 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+:root {
+    --color-accent : #48dbfb;
+    --color-second: #0abde3;
+    --color-gray : #1a1a1a;
+    --color-gray2 : #555555;
+    --color-gray3 : #c4c4c4;
+    --color-gray4 : #F0F0F0;
+    --color-error : #f25555;
+    --font-logo : 'Fredericka the Great', cursive;
+    --second-font : 'Overpass', sans-serif;
+}
+
+.header_home {
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_home span {
+    font-size: 45px;
+    font-family: var(--font-logo);
+    color: black;
+}
+
+/* Boton hamburguesa */
+
+.hamburger_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+
+.nav_home {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translate(0, -100%);
+}
+
+.nav_home.nav_home-active {
+    transform: translate(0%, 0%);
+}
+
+.nav_home .nav_home-link {
+    margin: 0 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_home .nav_home-link .home-link-a:is(:link, :active, :visited) {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+.nav_home .nav_home-link .home-link-a:hover {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.nav_home .nav_home-link .home-link-active:is(:link, :active, :visited) {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Media queris */
+
+@media (min-width: 768px) {
+    .header_home {
+        height: 9rem;
+    }
+
+    .header_home span {
+        font-size: 65px;
+    }
+
+    .nav_home {
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        display: inline;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .nav_home .nav_home-link {
+        display: inline-block;
+        height: 100%;
+        text-align: start;
+    }
+
+    .hamburger_btn {
+        display: none;
+    }
+}*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+:root {
+    --color-accent : #48dbfb;
+    --color-second: #0abde3;
+    --color-gray : #1a1a1a;
+    --color-gray2 : #555555;
+    --color-gray3 : #c4c4c4;
+    --color-gray4 : #F0F0F0;
+    --color-error : #f25555;
+    --font-logo : 'Fredericka the Great', cursive;
+    --second-font : 'Overpass', sans-serif;
+}
+
+.header_home {
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_home span {
+    font-size: 45px;
+    font-family: var(--font-logo);
+    color: black;
+}
+
+/* Boton hamburguesa */
+
+.hamburger_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+
+.nav_home {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translate(0, -100%);
+}
+
+.nav_home.nav_home-active {
+    transform: translate(0%, 0%);
+}
+
+.nav_home .nav_home-link {
+    margin: 0 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_home .nav_home-link .home-link-a:is(:link, :active, :visited) {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+.nav_home .nav_home-link .home-link-a:hover {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.nav_home .nav_home-link .home-link-active:is(:link, :active, :visited) {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Media queris */
+
+@media (min-width: 768px) {
+    .header_home {
+        height: 9rem;
+    }
+
+    .header_home span {
+        font-size: 65px;
+    }
+
+    .nav_home {
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        display: inline;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .nav_home .nav_home-link {
+        display: inline-block;
+        height: 100%;
+        text-align: start;
+    }
+
+    .hamburger_btn {
+        display: none;
+    }
+}*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+:root {
+    --color-accent : #48dbfb;
+    --color-second: #0abde3;
+    --color-gray : #1a1a1a;
+    --color-gray2 : #555555;
+    --color-gray3 : #c4c4c4;
+    --color-gray4 : #F0F0F0;
+    --color-error : #f25555;
+    --font-logo : 'Fredericka the Great', cursive;
+    --second-font : 'Overpass', sans-serif;
+}
+
+.header_home {
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_home span {
+    font-size: 45px;
+    font-family: var(--font-logo);
+    color: black;
+}
+
+/* Boton hamburguesa */
+
+.hamburger_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+
+.nav_home {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translate(0, -100%);
+}
+
+.nav_home.nav_home-active {
+    transform: translate(0%, 0%);
+}
+
+.nav_home .nav_home-link {
+    margin: 0 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_home .nav_home-link .home-link-a:is(:link, :active, :visited) {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+.nav_home .nav_home-link .home-link-a:hover {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.nav_home .nav_home-link .home-link-active:is(:link, :active, :visited) {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Media queris */
+
+@media (min-width: 768px) {
+    .header_home {
+        height: 9rem;
+    }
+
+    .header_home span {
+        font-size: 65px;
+    }
+
+    .nav_home {
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        display: inline;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .nav_home .nav_home-link {
+        display: inline-block;
+        height: 100%;
+        text-align: start;
+    }
+
+    .hamburger_btn {
+        display: none;
+    }
+}*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+:root {
+    --color-accent : #48dbfb;
+    --color-second: #0abde3;
+    --color-gray : #1a1a1a;
+    --color-gray2 : #555555;
+    --color-gray3 : #c4c4c4;
+    --color-gray4 : #F0F0F0;
+    --color-error : #f25555;
+    --font-logo : 'Fredericka the Great', cursive;
+    --second-font : 'Overpass', sans-serif;
+}
+
+.header_home {
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_home span {
+    font-size: 45px;
+    font-family: var(--font-logo);
+    color: black;
+}
+
+/* Boton hamburguesa */
+
+.hamburger_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+
+.nav_home {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translate(0, -100%);
+}
+
+.nav_home.nav_home-active {
+    transform: translate(0%, 0%);
+}
+
+.nav_home .nav_home-link {
+    margin: 0 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_home .nav_home-link .home-link-a:is(:link, :active, :visited) {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+.nav_home .nav_home-link .home-link-a:hover {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.nav_home .nav_home-link .home-link-active:is(:link, :active, :visited) {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Media queris */
+
+@media (min-width: 768px) {
+    .header_home {
+        height: 9rem;
+    }
+
+    .header_home span {
+        font-size: 65px;
+    }
+
+    .nav_home {
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        display: inline;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .nav_home .nav_home-link {
+        display: inline-block;
+        height: 100%;
+        text-align: start;
+    }
+
+    .hamburger_btn {
+        display: none;
+    }
+}*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+:root {
+    --color-accent : #48dbfb;
+    --color-second: #0abde3;
+    --color-gray : #1a1a1a;
+    --color-gray2 : #555555;
+    --color-gray3 : #c4c4c4;
+    --color-gray4 : #F0F0F0;
+    --color-error : #f25555;
+    --font-logo : 'Fredericka the Great', cursive;
+    --second-font : 'Overpass', sans-serif;
+}
+
+.header_home {
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_home span {
+    font-size: 45px;
+    font-family: var(--font-logo);
+    color: black;
+}
+
+/* Boton hamburguesa */
+
+.hamburger_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+
+.nav_home {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translate(0, -100%);
+}
+
+.nav_home.nav_home-active {
+    transform: translate(0%, 0%);
+}
+
+.nav_home .nav_home-link {
+    margin: 0 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_home .nav_home-link .home-link-a:is(:link, :active, :visited) {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+.nav_home .nav_home-link .home-link-a:hover {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.nav_home .nav_home-link .home-link-active:is(:link, :active, :visited) {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Media queris */
+
+@media (min-width: 768px) {
+    .header_home {
+        height: 9rem;
+    }
+
+    .header_home span {
+        font-size: 65px;
+    }
+
+    .nav_home {
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        display: inline;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .nav_home .nav_home-link {
+        display: inline-block;
+        height: 100%;
+        text-align: start;
+    }
+
+    .hamburger_btn {
+        display: none;
+    }
+}*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+:root {
+    --color-accent : #48dbfb;
+    --color-second: #0abde3;
+    --color-gray : #1a1a1a;
+    --color-gray2 : #555555;
+    --color-gray3 : #c4c4c4;
+    --color-gray4 : #F0F0F0;
+    --color-error : #f25555;
+    --font-logo : 'Fredericka the Great', cursive;
+    --second-font : 'Overpass', sans-serif;
+}
+
+.header_home {
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_home span {
+    font-size: 45px;
+    font-family: var(--font-logo);
+    color: black;
+}
+
+/* Boton hamburguesa */
+
+.hamburger_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+
+.nav_home {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translate(0, -100%);
+}
+
+.nav_home.nav_home-active {
+    transform: translate(0%, 0%);
+}
+
+.nav_home .nav_home-link {
+    margin: 0 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_home .nav_home-link .home-link-a:is(:link, :active, :visited) {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+.nav_home .nav_home-link .home-link-a:hover {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.nav_home .nav_home-link .home-link-active:is(:link, :active, :visited) {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Media queris */
+
+@media (min-width: 768px) {
+    .header_home {
+        height: 9rem;
+    }
+
+    .header_home span {
+        font-size: 65px;
+    }
+
+    .nav_home {
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        display: inline;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .nav_home .nav_home-link {
+        display: inline-block;
+        height: 100%;
+        text-align: start;
+    }
+
+    .hamburger_btn {
+        display: none;
+    }
+}*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+:root {
+    --color-accent : #48dbfb;
+    --color-second: #0abde3;
+    --color-gray : #1a1a1a;
+    --color-gray2 : #555555;
+    --color-gray3 : #c4c4c4;
+    --color-gray4 : #F0F0F0;
+    --color-error : #f25555;
+    --font-logo : 'Fredericka the Great', cursive;
+    --second-font : 'Overpass', sans-serif;
+}
+
+.header_home {
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_home span {
+    font-size: 45px;
+    font-family: var(--font-logo);
+    color: black;
+}
+
+/* Boton hamburguesa */
+
+.hamburger_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+
+.nav_home {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translate(0, -100%);
+}
+
+.nav_home.nav_home-active {
+    transform: translate(0%, 0%);
+}
+
+.nav_home .nav_home-link {
+    margin: 0 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_home .nav_home-link .home-link-a:is(:link, :active, :visited) {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+.nav_home .nav_home-link .home-link-a:hover {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.nav_home .nav_home-link .home-link-active:is(:link, :active, :visited) {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Media queris */
+
+@media (min-width: 768px) {
+    .header_home {
+        height: 9rem;
+    }
+
+    .header_home span {
+        font-size: 65px;
+    }
+
+    .nav_home {
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        display: inline;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .nav_home .nav_home-link {
+        display: inline-block;
+        height: 100%;
+        text-align: start;
+    }
+
+    .hamburger_btn {
+        display: none;
+    }
+}*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+:root {
+    --color-accent : #48dbfb;
+    --color-second: #0abde3;
+    --color-gray : #1a1a1a;
+    --color-gray2 : #555555;
+    --color-gray3 : #c4c4c4;
+    --color-gray4 : #F0F0F0;
+    --color-error : #f25555;
+    --font-logo : 'Fredericka the Great', cursive;
+    --second-font : 'Overpass', sans-serif;
+}
+
+.header_home {
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_home span {
+    font-size: 45px;
+    font-family: var(--font-logo);
+    color: black;
+}
+
+/* Boton hamburguesa */
+
+.hamburger_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+
+.nav_home {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translate(0, -100%);
+}
+
+.nav_home.nav_home-active {
+    transform: translate(0%, 0%);
+}
+
+.nav_home .nav_home-link {
+    margin: 0 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_home .nav_home-link .home-link-a:is(:link, :active, :visited) {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+.nav_home .nav_home-link .home-link-a:hover {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.nav_home .nav_home-link .home-link-active:is(:link, :active, :visited) {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Media queris */
+
+@media (min-width: 768px) {
+    .header_home {
+        height: 9rem;
+    }
+
+    .header_home span {
+        font-size: 65px;
+    }
+
+    .nav_home {
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        display: inline;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .nav_home .nav_home-link {
+        display: inline-block;
+        height: 100%;
+        text-align: start;
+    }
+
+    .hamburger_btn {
+        display: none;
+    }
+}*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+:root {
+    --color-accent : #48dbfb;
+    --color-second: #0abde3;
+    --color-gray : #1a1a1a;
+    --color-gray2 : #555555;
+    --color-gray3 : #c4c4c4;
+    --color-gray4 : #F0F0F0;
+    --color-error : #f25555;
+    --font-logo : 'Fredericka the Great', cursive;
+    --second-font : 'Overpass', sans-serif;
+}
+
+.header_home {
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_home span {
+    font-size: 45px;
+    font-family: var(--font-logo);
+    color: black;
+}
+
+/* Boton hamburguesa */
+
+.hamburger_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+
+.nav_home {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translate(0, -100%);
+}
+
+.nav_home.nav_home-active {
+    transform: translate(0%, 0%);
+}
+
+.nav_home .nav_home-link {
+    margin: 0 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_home .nav_home-link .home-link-a:is(:link, :active, :visited) {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+.nav_home .nav_home-link .home-link-a:hover {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.nav_home .nav_home-link .home-link-active:is(:link, :active, :visited) {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Media queris */
+
+@media (min-width: 768px) {
+    .header_home {
+        height: 9rem;
+    }
+
+    .header_home span {
+        font-size: 65px;
+    }
+
+    .nav_home {
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        display: inline;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .nav_home .nav_home-link {
+        display: inline-block;
+        height: 100%;
+        text-align: start;
+    }
+
+    .hamburger_btn {
+        display: none;
+    }
+}*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+:root {
+    --color-accent : #48dbfb;
+    --color-second: #0abde3;
+    --color-gray : #1a1a1a;
+    --color-gray2 : #555555;
+    --color-gray3 : #c4c4c4;
+    --color-gray4 : #F0F0F0;
+    --color-error : #f25555;
+    --font-logo : 'Fredericka the Great', cursive;
+    --second-font : 'Overpass', sans-serif;
+}
+
+.header_home {
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_home span {
+    font-size: 45px;
+    font-family: var(--font-logo);
+    color: black;
+}
+
+/* Boton hamburguesa */
+
+.hamburger_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+
+.nav_home {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translate(0, -100%);
+}
+
+.nav_home.nav_home-active {
+    transform: translate(0%, 0%);
+}
+
+.nav_home .nav_home-link {
+    margin: 0 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_home .nav_home-link .home-link-a:is(:link, :active, :visited) {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+.nav_home .nav_home-link .home-link-a:hover {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.nav_home .nav_home-link .home-link-active:is(:link, :active, :visited) {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Media queris */
+
+@media (min-width: 768px) {
+    .header_home {
+        height: 9rem;
+    }
+
+    .header_home span {
+        font-size: 65px;
+    }
+
+    .nav_home {
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        display: inline;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .nav_home .nav_home-link {
+        display: inline-block;
+        height: 100%;
+        text-align: start;
+    }
+
+    .hamburger_btn {
+        display: none;
+    }
+}*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+:root {
+    --color-accent : #48dbfb;
+    --color-second: #0abde3;
+    --color-gray : #1a1a1a;
+    --color-gray2 : #555555;
+    --color-gray3 : #c4c4c4;
+    --color-gray4 : #F0F0F0;
+    --color-error : #f25555;
+    --font-logo : 'Fredericka the Great', cursive;
+    --second-font : 'Overpass', sans-serif;
+}
+
+.header_home {
+    height: 6rem;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_home span {
+    font-size: 45px;
+    font-family: var(--font-logo);
+    color: black;
+}
+
+/* Boton hamburguesa */
+
+.hamburger_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+
+.nav_home {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translate(0, -100%);
+}
+
+.nav_home.nav_home-active {
+    transform: translate(0%, 0%);
+}
+
+.nav_home .nav_home-link {
+    margin: 0 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_home .nav_home-link .home-link-a:is(:link, :active, :visited) {
+    font-size: 2.4rem;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+.nav_home .nav_home-link .home-link-a:hover {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.nav_home .nav_home-link .home-link-active:is(:link, :active, :visited) {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Main */
+
+.tittle_section {
+    margin: 0 2rem;
+    margin-top: 11rem;
+    height: auto;
+}
+
+.tittle_section h1{
+    font-size: 4.4rem;
+}
+
+/* Media queris */
+
+@media (min-width: 768px) {
+    .header_home {
+        height: 9rem;
+    }
+
+    .header_home span {
+        font-size: 6.5rem;
+    }
+
+    .nav_home {
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        display: inline;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .nav_home .nav_home-link {
+        display: inline-block;
+        height: 100%;
+        text-align: start;
+    }
+
+    .hamburger_btn {
+        display: none;
+    }
+}
