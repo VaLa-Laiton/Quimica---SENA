@@ -1,0 +1,32 @@
+.main {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.section_intro {
+    margin: 0 1rem;
+    margin-top: 5rem;
+}
+
+.section_intro h2, p, ul {
+    margin: 0 1rem;
+}
+
+.section_intro h2 {
+    font-size: 3rem;
+}
+
+@media (min-width: 640px) {
+    
+}
+
+@media (min-width: 900px) {
+    .section_intro {
+        max-width: 120rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
