@@ -14,7 +14,42 @@
 }
 
 .section_intro h2 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.section_intro h3 {
     font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.section_intro p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.section_intro ul li {
+    font-size: 2rem;
+    margin: 0 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.section_intro ul .ul_li-excepcion {
+    margin-top: 0rem;
+}
+
+.section_intro ul a {
+    font-size: 2rem;
+    color: white;
+    margin: 0 2rem;
+    text-decoration: none;
+    background-color: var(--color-gray);
+    padding: 0 .5rem;
+}
+
+.section_intro ul a:hover {
+    opacity: .8;
 }
 
 @media (min-width: 640px) {
@@ -28,5 +63,23 @@
 }
 
 @media (min-width: 1200px) {
+    .section_intro h2 {
+        font-size: 5rem;
+    }
 
+    .section_intro h3 {
+        font-size: 4rem;
+    }
+
+    .section_intro p {
+        font-size: 2.5rem;
+    }
+
+    .section_intro ul li {
+        font-size: 2.5rem;
+    }
+
+    .section_intro ul a {
+        font-size: 2.5rem;
+    }
 }
