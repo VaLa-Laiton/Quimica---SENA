@@ -14,18 +14,22 @@
 }
 
 .section_intro h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 3rem;
 }
 
 .section_intro h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 3rem;
 }
 
 .section_intro p {
     font-size: 1.6rem;
     margin-bottom: 2rem;
+}
+
+.section_intro .intro_p-excepcion {
+    margin-top: 2rem;
 }
 
 .section_intro ul li {
@@ -58,7 +62,7 @@
 }
 
 .section_intro a {
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: white;
     margin: 0 2rem;
     text-decoration: none;
@@ -71,37 +75,47 @@
 }
 
 @media (min-width: 640px) {
-    
+    .section_intro ul img {
+        max-width: 40rem;
+    }    
 }
 
 @media (min-width: 900px) {
     .section_intro {
         max-width: 120rem;
     }
+
+    .section_intro ul img {
+        max-width: 50rem;
+    } 
 }
 
 @media (min-width: 1200px) {
     .section_intro h2 {
-        font-size: 5rem;
-    }
-
-    .section_intro h3 {
         font-size: 4rem;
     }
 
+    .section_intro h3 {
+        font-size: 3rem;
+    }
+
     .section_intro p {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .section_intro ul li {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .section_intro ul a {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
+    .section_intro ul img {
+        max-width: 60rem;
+    } 
+
     .section_intro a {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
