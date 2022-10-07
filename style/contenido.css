@@ -109,6 +109,7 @@
 }
 
 .section_intro .section_card-item .card-item div {
+    width: 80%;
     margin: 1rem;
     padding-bottom: 1rem;
 }
