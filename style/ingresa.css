@@ -1,0 +1,171 @@
+.main {
+    width: 100%;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+:visited {
+    color: #0066CC;
+}
+
+.main .section-sign {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main .section-sign .section-sign-tittle {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 2.7rem;
+}
+
+.main .section-sign .section-sign-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34.8rem;
+    height: 5rem;
+    border: solid .1rem #979797;
+    border-radius: .5rem;
+    margin-bottom: 2.7rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.main .section-sign .section-sign-google img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 2rem;
+}
+
+.main .section-sign .section-sign-google p {
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: var(--primary-font);
+}
+
+.main .section-sign .section-sign-facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34.8rem;
+    height: 5rem;
+    border: solid .1rem #1877f2;
+    border-radius: .5rem;
+    margin-bottom: 2.7rem;
+    background-color: #1877f2;
+    cursor: pointer;
+}
+
+.main .section-sign .section-sign-facebook img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2rem;
+}
+
+.main .section-sign .section-sign-facebook p {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: white;
+    font-family: var(--primary-font);
+}
+
+.main .section-sign .section-sign-p {
+    font-size: 2rem;
+    color: #979797;
+    font-family: var(--primary-font);
+    margin-bottom: 2.7rem;
+}
+
+.main .section-sign .section-sign-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 34.8rem;
+    height: 5rem;
+    padding: 0 2rem;
+    border: solid .1rem #979797;
+    border-radius: .5rem;
+    margin-bottom: 2.7rem;
+}
+
+.main .section-sign .section-sign-email input {
+    border: none;
+    height: 99%;
+    width: 99%;
+    font-size: 2.4rem;
+    font-family: var(--primary-font);
+}
+
+.main .section-sign .section-sign-password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 34.8rem;
+    height: 5rem;
+    padding: 0 2rem;
+    border: solid .1rem #979797;
+    border-radius: .5rem;
+    margin-bottom: 2.7rem;
+}
+
+.main .section-sign .section-sign-password input {
+    border: none;
+    height: 99%;
+    width: 99%;
+    font-size: 2.4rem;
+    font-family: var(--primary-font);
+}
+
+.main .section-sign .section-sign-password img {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.main .section-sign .section-sign-iniciar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34.8rem;
+    height: 5rem;
+    border: solid .1rem #48DBFB;
+    border-radius: .5rem;
+    margin-bottom: 2.7rem;
+    background-color: #48DBFB;
+    cursor: pointer;
+}
+
+.main .section-sign .section-sign-iniciar p {
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: var(--primary-font);
+}
+
+.main .section-sign .section-sign-olvidar {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 2.7rem;
+}
+
+.main .section-sign .section-sign-sign-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .section-sign .section-sign-sign-up p {
+    font-size: 2rem;
+}
+
+.main .section-sign .section-sign-sign-up a {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
